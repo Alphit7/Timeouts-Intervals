@@ -1,4 +1,4 @@
-import { scoring, score } from "./Scoring.js";
+import { scoring, score, resetScore } from "./Scoring.js";
 import { hardDifficulty, mediumDifficulty, endGame } from "./difficulty.js";
 
 export let whackEasy;
@@ -21,6 +21,9 @@ let startButton = document.querySelector(".start__button");
 startButton.addEventListener("click", start);
 
 function start() {
+  resetScore();
+  let scoreBoard = document.querySelector(".score__display");
+  scoreBoard.textContent = "Score: " + score;
   whackEasy = setInterval(whackAMole, 1000);
   setTimeout(mediumDifficulty, 25000);
   setTimeout(hardDifficulty, 45000);

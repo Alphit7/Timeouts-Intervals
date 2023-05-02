@@ -8,3 +8,7 @@ export function scoring(event) {
   scoreBoard.textContent = "Score: " + score;
   circle.removeEventListener("click", scoring);
 }
+export function resetScore() {
+  score = 0;
+  return score;
+}
