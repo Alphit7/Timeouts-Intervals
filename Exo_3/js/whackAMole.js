@@ -25,4 +25,5 @@ function start() {
   setTimeout(mediumDifficulty, 25000);
   setTimeout(hardDifficulty, 45000);
   setTimeout(endGame, 60000);
+  startButton.setAttribute("disabled", "true");
 }

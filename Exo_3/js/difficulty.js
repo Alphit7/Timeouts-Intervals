@@ -22,5 +22,7 @@ export function endGame() {
     circle.style.backgroundColor = "white";
     circle.removeEventListener("click", scoring);
   }
+  let startButton = document.querySelector(".start__button");
+  startButton.removeAttribute("disabled");
   alert("You scored: " + score + " points");
 }
