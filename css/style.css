@@ -1,12 +1,16 @@
-body {
+.circles__container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
 }
 
 .circles {
-  width: 300px;
-  height: 300px;
+  width: 100px;
+  height: 100px;
   border: 1px solid black;
   border-radius: 50%;
+}
+
+.score {
+  font-size: 50px;
 }/*# sourceMappingURL=style.css.map */
