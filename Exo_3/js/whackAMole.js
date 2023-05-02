@@ -1,6 +1,8 @@
 import { scoring, score } from "./Scoring.js";
 import { hardDifficulty, mediumDifficulty, endGame } from "./difficulty.js";
 
+export let whackEasy;
+
 export function whackAMole() {
   // retirer la couleur rouge des cercles inactifs
   for (let i = 0; i < 12; i++) {
@@ -15,8 +17,12 @@ export function whackAMole() {
   circle.style.backgroundColor = "red";
   circle.addEventListener("click", scoring);
 }
+let startButton = document.querySelector(".start__button");
+startButton.addEventListener("click", start);
 
-export let whackEasy = setInterval(whackAMole, 1000);
-setTimeout(mediumDifficulty, 60000);
-setTimeout(hardDifficulty, 90000);
-setTimeout(endGame, 120000);
+function start() {
+  whackEasy = setInterval(whackAMole, 1000);
+  setTimeout(mediumDifficulty, 25000);
+  setTimeout(hardDifficulty, 45000);
+  setTimeout(endGame, 60000);
+}

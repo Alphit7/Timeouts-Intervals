@@ -4,8 +4,9 @@
     grid-template-rows: repeat(3, 1fr);
 }
 .circles{
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
+    margin: 3px;
     border: 1px solid black;
     border-radius: 50%;
 }
